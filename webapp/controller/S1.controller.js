@@ -4,6 +4,6 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("training.session3.employeedetails.controller.S1", {
-// comment
+
 	});
 });
