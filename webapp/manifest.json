@@ -10,11 +10,28 @@
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"sourceTemplate": {
-			"id": "ui5template.basicSAPUI5ApplicationProject",
-			"version": "1.38.11"
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"myOData": {
+				"uri": "/sap/opu/odata/sap/ZGWP_UI5SESSION_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/ZGWP_UI5SESSION_SRV/metadata.xml"
+				}
+			},
+			"ZGWPO_2019_SRV": {
+				"uri": "/sap/opu/odata/sap/ZGWPO_2019_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/ZGWPO_2019_SRV/metadata.xml"
+				}
+			}
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -33,10 +50,8 @@
 		"supportedThemes": [
 			"sap_hcb",
 			"sap_bluecrystal"
-
 		]
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "training.session3.employeedetails.view.S1",
@@ -64,12 +79,20 @@
 				"settings": {
 					"bundleName": "training.session3.employeedetails.i18n.i18n"
 				}
+			},
+			"": {
+				"dataSource": "myOData"
+			},
+			"xyz":{
+				"dataSource":"ZGWPO_2019_SRV"
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		}
 	}
 }

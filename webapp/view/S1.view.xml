@@ -3,7 +3,41 @@
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+					<Table id="tab1" items="{jsonMod>/}">
+						<columns>
+							<Column>
+								<header>
+									<Label text="Employee ID"/>
+								</header>
+							</Column>
+							<Column>
+								<header>
+									<Label text="Employee Name"/>
+								</header>
+							</Column>
+							<Column>
+								<header>
+									<Label text="Employee Age"/>
+								</header>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Label text="{jsonMod>empId}"/>
+								</cells>
+								<cells>
+									<Label text="{jsonMod>empName}"/>
+								</cells>
+								<cells>
+									<Label text="{jsonMod>empAge}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Button text="Get Data" press="onGetData"/>
+				</content>
 			</Page>
 		</pages>
 	</App>
